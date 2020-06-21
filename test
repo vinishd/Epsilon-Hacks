@@ -1,0 +1,45 @@
+/**
+ * Auto Generated Java Class.
+ */
+public class HighestCoins {
+  double inputValue;
+  double dollar = 1.00;
+  double quarter = 0.25;
+  double dime = 0.10;
+  double penny = 0.01;
+  
+  //double value = inputValue;
+  private static int countDollars = 0;
+   private static int countDimes = 0;
+   private static int countQuarters=0;
+  private static int countPennys=0;
+  
+  
+  
+  
+  public static String highestCoinsAmt(double inputValue){
+    
+    while(inputValue > 0){
+      if(inputValue > 1.00){
+        inputValue -= 1.00;
+        countDollars++;
+      }
+      else if(inputValue < 1.00 && inputValue > 24.99){
+        inputValue-= 0.25;
+        countQuarters++;
+      }
+      else if(inputValue <= 24.99 && inputValue > 9.00){
+        inputValue-= 0.1; 
+        countDimes++;
+      }
+      else if(inputValue <= 9.00){
+        inputValue-= 0.01;
+        countPennys++;
+      }
+    }
+    return "The least amount of coins you will have is: " + countDollars + " dollars, " + countQuarters + " quarters, " + countDimes + " dimes, and " + countPennys + " pennies";
+  }
+  public static void main(String[] args) {
+    System.out.println(highestCoinsAmt(10.75));
+  }
+}
