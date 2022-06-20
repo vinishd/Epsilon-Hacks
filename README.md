@@ -1,3 +1,3 @@
 # Epsilon Hacks Website
 
-Website providing support to employees being discriminized in the workplace.
+Built a website to provide free resources for workers experiencing discrimination in the workplace.
